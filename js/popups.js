@@ -76,7 +76,7 @@ function popupClose(popupActive, doUnlock = true)                    // функ
 }
 
 
-function bodyLock()  // убираем прокрутку у боди
+function bodyLock()  // убираем прокрутку у боди и добавляем правый пэдинг для боди и шапки
 {
 	const lockPaddingValue =
 		window.innerWidth - document.querySelector('.wrapper')
@@ -100,7 +100,7 @@ function bodyLock()  // убираем прокрутку у боди
 	}, timeout);
 }
 
-function bodyUnLock()
+function bodyUnLock()  // возвращаем прокрутку боди и убираем правый пэдинг
 {
 	setTimeout(function ()
 	{
@@ -123,7 +123,7 @@ function bodyUnLock()
 	}, timeout);
 }
 
-document.addEventListener('keydown', function (e)
+document.addEventListener('keydown', function (e) // закрываем попап по Esc
 {
 	if (e.which === 27)
 	{
